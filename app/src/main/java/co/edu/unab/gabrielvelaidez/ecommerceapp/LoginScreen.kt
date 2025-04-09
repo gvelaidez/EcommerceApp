@@ -29,10 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import co.edu.unab.gabrielvelaidez.ecommerceapp.ui.theme.EcommerceAppTheme
 
 @Composable
-fun loginScreen() {
+fun loginScreen(navController: NavController) {
 
     Scaffold { valuesPadding ->
         Column(
@@ -103,7 +104,9 @@ fun loginScreen() {
                 )
             }
             Spacer(modifier = Modifier.height(24.dp))
-            TextButton(onClick = {}) {
+            TextButton(onClick = {
+                navController.navigate("register")
+            }) {
                 Text("No tienes una cuenta? Registrate", color = Color(0xFFFF9900))
             }
 
@@ -116,6 +119,6 @@ fun loginScreen() {
 @Composable
 fun LoginScreenPreview(){
     EcommerceAppTheme {
-        loginScreen()
+        //loginScreen()
     }
 }
