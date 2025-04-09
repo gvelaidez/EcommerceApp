@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
                         loginScreen(myNavController)
                     }
                     composable("register") {
-                        RegisterScreen()
+                        RegisterScreen(myNavController)
                     }
                 }
 
